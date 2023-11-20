@@ -26,6 +26,9 @@ node index.js
 5. Login with qr code
 6. enjoy
 
+![showcase](/imgs/showcase.gif)
+
+
 # Disclaimer:
 
 This project might get your account **DISABLED** for selfbots.

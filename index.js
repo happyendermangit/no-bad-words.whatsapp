@@ -2,7 +2,8 @@ const qrcode = require('qrcode-terminal');
 const { words }  = require('./words.js')
 
 let config = {
-    groupName:"Name"
+    groupName:"Name",
+    Message:"🤡 Nice try!\n There ain't any bad words in this group 💀"
 }
 
 const { Client,LocalAuth } = require('whatsapp-web.js');
@@ -25,7 +26,7 @@ client.on('message_create',(msg) => {
             for (word of msg.body.split(' ')){
                 if (words.includes(word.toLowerCase())){
                     msg.delete(true)
-                    client.sendMessage(msg.from,"🤡 Nice try!\n There ain't any bad words in this group 💀")
+                    client.sendMessage(msg.from,config.Message)
                     break;
                 }
             }
